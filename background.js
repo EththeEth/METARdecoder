@@ -1,1 +1,1 @@
-// Empty
+// Intentionally empty file
