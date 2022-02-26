@@ -38,6 +38,29 @@ p#info {
   text-align: center;
 }
 
+p#copyright {
+  text-align: right;
+  font-size: 0.75rem;
+  background-color: #1b20a3;
+  margin: 0 -0.5rem -0.5rem -0.5rem;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+p#copyright a {
+  color: #f70;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 1.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background: url('images/fsn.png');
+  background-size: 1.0rem;
+  background-position: 0.25rem 0.3rem;
+  background-repeat: no-repeat;
+}
+
 div#metar {
   display: none;
 }
