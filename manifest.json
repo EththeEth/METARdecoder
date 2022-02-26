@@ -1,7 +1,7 @@
 {
     "name": "METAR decoder",
     "description": "Having trouble understanding METAR reports? With METAR decoder, you can figure out what your report says instantly!",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "manifest_version": 3,
     "background": {
         "service_worker": "background.js"
