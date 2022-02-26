@@ -484,7 +484,14 @@ document.getElementById('parseMETAR').addEventListener("click", async () => {
 
           } else {
 
-            target.append("<li>" + key + ": <strong>" + data[key] + "</strong></li>");
+            if (key != "abbreviation" &&
+                key != "seperator" &&
+                (key != "type" && data[key] != "METAR") &&
+                data[key] != null) {
+
+                target.append("<li><span class='label'>" + key + "</span><strong class='value'>" + data[key] + "</strong></li>");
+
+            }
             
           }
 
