@@ -501,6 +501,8 @@ document.getElementById('parseMETAR').addEventListener("click", async () => {
 
       displayData(metar,ul);
 
+      $("p#info").hide();
+      
       $("div#metar").show();
 
     }

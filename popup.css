@@ -1,13 +1,24 @@
 button {
     height: 50px;
-    width: 200px;
+    width: 250px;
 /*    outline: none;*/
     margin: 10px;
     border: none;
     border-radius: 1rem;
-    background-color: #999;
+    background-color: #F70;
+    font-size: 1.25rem;
+    font-weight: 700;
   }
   
+img {
+  margin: 10px;
+}
+
+p#info {
+  margin: 10px;
+  font-style: italic;
+  text-align: center;
+}
 /*button.current {
   box-shadow: 0 0 0 2px white,
               0 0 0 4px black;
