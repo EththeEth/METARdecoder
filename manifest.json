@@ -11,17 +11,17 @@
       "action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "/images/windsock16.png",
-            "32": "/images/windsock32.png",
-            "48": "/images/windsock48.png",
-            "128": "/images/windsock128.png"
+            "16": "/images/cloudbolt16.png",
+            "32": "/images/cloudbolt32.png",
+            "48": "/images/cloudbolt48.png",
+            "128": "/images/cloudbolt128.png"
           }
       },
       "icons": {
-        "16": "/images/windsock16.png",
-        "32": "/images/windsock32.png",
-        "48": "/images/windsock48.png",
-        "128": "/images/windsock128.png"
+        "16": "/images/cloudbolt16.png",
+        "32": "/images/cloudbolt32.png",
+        "48": "/images/cloudbolt48.png",
+        "128": "/images/cloudbolt128.png"
       },
       "content_scripts": [{
         "matches": [ "http://*/*", "https://*/*"],
