@@ -1,4 +1,4 @@
-document.getElementById('parseMETAR').addEventListener("click", async () => {
+document.getElementById('decode').addEventListener("click", async () => {
 
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   
@@ -583,19 +583,26 @@ document.getElementById('parseMETAR').addEventListener("click", async () => {
       // Get first result returned as we only return one result
       const metar = metarData[0].result;
 
-      $("div#metar").html("<ul></ul>");
-
       let ul = $("div#metar > ul");
 
       console.log(metar);
 
       displayData(metar,ul);
 
+      $("button#decode").hide();
       $("p#info").hide();
       
       $("div#metar").show();
 
+      $("button#close").click(function() {
+        $("div#metar > ul").html("");
+        $("div#metar").hide();
+        $("button#decode").show();
+        $("p#info").show();
+      })
+
     }
+
   );
   
 
