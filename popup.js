@@ -466,34 +466,115 @@ document.getElementById('parseMETAR').addEventListener("click", async () => {
     }},
     (metarData) => {
 
+        const labels = {
+            "0": "0",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "11": "11",
+            "12": "12",
+            "13": "13",
+            "14": "14",
+            "15": "15",
+            "16": "16",
+            "17": "17",
+            "18": "18",
+            "19": "19",
+            "runway": "Runway",
+            "direction": "Direction",
+            "seperator": null,
+            "minIndicator": "Min. Indicator",
+            "minValue": "Min. Value",
+            "variableIndicator": "Var. Indicator",
+            "maxIndicator": "Max. Indicator",
+            "maxValue": "Max. Value",
+            "trend": "Trend",
+            "unitsOfMeasure": "Units of Measure",
+            "abbreviation": null,
+            "meaning": "Status",
+            "type": null,
+            "station": "Station",
+            "time": "Time",
+            "auto": "Auto",
+            "correction": "Correction",
+            "wind": "Window",
+            "speed": "Speed",
+            "gust": "Gust",
+            "direction": "Direction",
+            "variation": "Variation",
+            "cavok": "CAVOK",
+            "visibility": "Visibility",
+            "visibilityVariation": "Visibility Variation",
+            "visibilityVariationDirection": " Visibility Variation Direction",
+            "rvr": "Runway Visual Range",
+            "weather": "Weather",
+            "clouds": "Cloud Layers",
+            "altitude": "Altitude",
+            "cumulonimbus": "Cumulonimbus",
+            "temperature": "Temperature",
+            "dewpoint": "Dew Point",
+            "altimeterInHg": "Altimeter (Hg)",
+            "altimeterInHpa": "Altimeter (Hpa)",
+            "recentSignificantWeather": null,
+            "recentSignificantWeatherDescription": "Recent Sig. Weather"
+        };
+
       function displayData(data,target) {
+
+        const classes = ["odd","even"];
+        let count = 0;
 
         for (key in data) {
 
-          if (typeof(data[key]) == "object" || typeof(data[key]) == "array") {
+            if (labels[key] != null) { // We haven't excluded this field
 
-            if (typeof(data[key]) != null) {
+                if (typeof(data[key]) == "object") { // Handle Objects
 
-              target.append("<li>" + key + ": <ul id='key-" + key + "'></ul></li>");
+                    let num = 0;
+                    for (let k in data[key]) if (data[key].hasOwnProperty(k)) num++;
 
-              let newul = target.find("ul#key-" + key);
+                    if (num > 0) { // Ignore if empty
 
-              displayData(data[key],newul);
+                        target.append("<li class='" + classes[count % 2] + "'>" + labels[key] + ": <ul id='key-" + key + "'></ul><div class='clear'></div></li>");
+
+                        count++;
+
+                        let newul = target.find("ul#key-" + key);
+
+                        displayData(data[key],newul);
+
+                    }
+
+                } else if (typeof(data[key]) == "array") { // Handle Arrays
+
+                    if (data[key].length > 0) { // Ignore if empty
+
+                        target.append("<li class='" + classes[count % 2] + "'>" + labels[key] + ": <ul id='key-" + key + "'></ul><div class='clear'></div></li>");
+
+                        count++;
+
+                        let newul = target.find("ul#key-" + key);
+
+                        displayData(data[key],newul);
+
+                    }
+
+                } else { // Handle everything else
+
+                    target.append("<li class='" + classes[count % 2] + "'><span class='label'>" + labels[key] + "</span><strong class='value'>" + data[key] + "</strong><div class='clear'></div></li>");
+
+                    count++;
+
+                }
 
             }
-
-          } else {
-
-            if (key != "abbreviation" &&
-                key != "seperator" &&
-                (key != "type" && data[key] != "METAR") &&
-                data[key] != null) {
-
-                target.append("<li><span class='label'>" + key + "</span><strong class='value'>" + data[key] + "</strong></li>");
-
-            }
-            
-          }
 
         }
 
@@ -505,6 +586,8 @@ document.getElementById('parseMETAR').addEventListener("click", async () => {
       $("div#metar").html("<ul></ul>");
 
       let ul = $("div#metar > ul");
+
+      console.log(metar);
 
       displayData(metar,ul);
 

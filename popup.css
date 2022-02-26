@@ -44,10 +44,13 @@ ul {
 }
 
 ul li {
-  border-top: 2px solid #1b20a3;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  border-top: 1px solid #1b20a3;
+  padding: 3px;
   clear: both;
+}
+
+ul li.odd {
+  background-color: #1b20a322;
 }
 
 ul li ul {
@@ -56,8 +59,10 @@ ul li ul {
 
 ul li ul li {
   border-top: none;
-  padding-top: 3px;
-  padding-bottom: 3px;
+}
+
+ul li ul li.odd {
+  background: none;
 }
 
 ul li ul li ul {
@@ -66,8 +71,6 @@ ul li ul li ul {
 
 ul li ul li ul li {
   border-top: none;
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
 
 li span.label {
@@ -77,4 +80,8 @@ li span.label {
   word-wrap: break-word;
 }
 
-li strong.value {}
+div.clear {
+  height: 1px;
+  font-size: 1px;
+  clear: both;
+}
