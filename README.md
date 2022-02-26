@@ -23,9 +23,9 @@ Both projects's code are included in this project's repository for simplicity an
 
 ## License
 
-This project has been developed by [@EththeEth](https://github.com/EththeEth) and [@likeablegeek](https://likeablegeek.com) and is copyright jointly by @EththeEth and @likeablegeek.
+This project has been developed by [@EththeEth](https://github.com/EththeEth) and [@likeablegeek](https://likeablegeek.com) and is distributed by [FlightSim Ninja](https://flightsim.ninja).
 
-Copyright 2022, @EththeEth (https://github.com/EththeEth) and @likeablegeek (https://likeablegeek.com).
+Copyright 2022, FlightSim Ninja (https://flightsim.ninja).
 
 This project is avaiable as an open source package under the MIT license:
 

@@ -8,7 +8,7 @@ Distributed by: FlightSim Ninja (http://flightim.ninja)
 
 GitHub: https://github.com/EththeEth/METARdecoder
 
-Copyright 2022, @EththeEth (https://github.com/EththeEth) and @likeablegeek (https://likeablegeek.com).
+Copyright 2022, FlightSim Ninja (https://flightsim.ninja).
 
 Licensed under the MIT license.
 
