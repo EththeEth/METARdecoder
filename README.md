@@ -8,9 +8,11 @@ The easiest way to install METARdecoder is from the Chrome Web Store:
 
 *Coming Soon*
 
-You can also clone this repository and load it as an unpacked extension as described in the Chrome Extensions developer documentation
+You can also clone this repository and load it as an unpacked extension as described in the Chrome Extensions developer documentation:
 
 [Load an unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked)
+
+This is only recommended by Google for use during extension development.
 
 ## Credits and Acknowledgements
 
