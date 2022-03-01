@@ -2,7 +2,7 @@
 
 METARdecoder is a simple Chrome extension for parsing and decoding METAR reports found online. Users simply highlight the text of a METAR in a web page and click the "Decode METAR" button to get a user-friendly display of the METAR report.
 
-> The current version number of METARdecorder is 0.0.2. This is an initial implementation so best considered a "beta" version. There should be no risk to using it and it shouldn't impact borwser behaviour or performance -- but more testing with many METAR reports from many web sites would be needed to fully validate it works in all necessary use cases.
+> The current version number of METARdecoder is 0.0.2. This is an initial implementation so best considered a "beta" version. There should be no risk to using it and it should not impact browser behaviour or performance -- but more testing with many METAR reports from many web sites would be needed to fully validate it works in all necessary use cases.
 
 ## Installing METARdecoder
 
@@ -18,7 +18,7 @@ This is only recommended by Google for use during extension development.
 
 ## Using METARdecorder
 
-Using METARdecoder is easy. Simply visit a web site containing a METAR report on it, select and highlight the text of the METAR in the page, open METARdecorder and press the **Decode Metar** button.
+Using METARdecoder is easy. Simply visit a web site containing a METAR report on it, select and highlight the text of the METAR in the page, open METARdecoder and press the **Decode Metar** button.
 
 ## Credits and Acknowledgements
 
