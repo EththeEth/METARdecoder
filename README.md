@@ -6,7 +6,7 @@ METARdecoder is a simple Chrome extension for parsing and decoding METAR reports
 
 The easiest way to install METARdecoder is from the Chrome Web Store:
 
-*Coming Soon*
+[Install from Chrome Web Store](https://chrome.google.com/webstore/detail/metar-decoder/bbjmdeidjfgbeflcdompdiglpmdpbhhm)
 
 You can also clone this repository and load it as an unpacked extension as described in the Chrome Extensions developer documentation:
 
